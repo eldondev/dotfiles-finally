@@ -1,0 +1,3 @@
+#This is a script to dump the unbound cache to a local redis instance for eventual analysis
+* * * * * root  bash -c "/usr/sbin/unbound-control dump_cache | redis-cli -x  SET $(date +\%s)"
+

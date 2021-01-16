@@ -1,0 +1,1 @@
+This includes an unbound config with a minimum TTL of 240 seconds (4 minutes), disablement of DOH, and some logging. Since we set the TTL minimum, and the cron is scheduled to run every minute, we should capture all items resolved by unbound.
