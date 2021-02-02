@@ -1,0 +1,4 @@
+#!/bin/bash
+set -xeuo pipefail
+/usr/sbin/unbound-control dump_cache | jq -sR "{\"$(date +%s)\":..}" | redis-cli -x LPUSH "unbound_cache"
+
